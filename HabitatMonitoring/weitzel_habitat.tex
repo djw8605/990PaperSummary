@@ -1,6 +1,6 @@
 \documentclass[12pt]{article}
 
-
+\usepackage{amsthm}
 \begin{document}
 
 \begin{center}
@@ -10,6 +10,20 @@ Derek Weitzel
 
 This article gives an overview of wildlife monitoring using sensor networks.  
 
+Authors say:
+\begin{quote}
+In addition to storing the data from the sensor network, the data center also stores the information from the verification network.
+\end{quote}
+The authors do not define a 'verification network' until much later.
+
+There where a few interesting definitions.  As I am new the WSNs, I found these interesting.
+\begin{itemize}
+\item { \bf Duty Cycle:} The duty cycle of a node is the percentage of time each node is awake.
+\end{itemize}
+
+I was intrigued with TinyDB.  A SQL language that is executed on the sensor nodes.  I would be interested in what subset of SQL was implemented.  I have experience with SQL, and it is not a 'brief' language.
+
+I was impressed with the use of common network techniques, CSMA and TDMA, in WSN.  I had thought that well understood algorithms such as these could be useful in other environments.  But, I am surprised that CSMA causes a lower duty cycle.  I would assume, since the node has to be 'awake' to wait to send, and awake to receive (what if the packet is destined for me!), that it could cause the node to stay on more often.  I would also be interested in if there is additional cost to 'turn on' the node.  
 \end{document}
 
 
