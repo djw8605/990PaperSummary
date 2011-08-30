@@ -4,30 +4,22 @@
 \begin{document}
 
 \begin{center}
-{\huge Summary: Overview of Sensor Networks } \\
+{\huge Summary: The Mote Revolution } \\
 Derek Weitzel
 \end{center}
 
 
-This paper was a very general overview of the field of Sensor Networks.  I have several comments on the paper.
+This presentation is describing the evolution of WSN's, and the current technology.  Reading over the slides, I couldn't help but feel that the authors where trying to sell the 'Telos Platform`.  For example, on slide 13, it feels ever much like a product slide.  It's not clear to me by the institution if these authors represent the Telos group.  Either way, this 
 
-In the first section, they say:
-\begin{quote}
-The individual devices in a wireless sensor network (WSN) are inherently resource constrained: They have limited processing speed, storage capacity, and communication bandwidth.
-\end{quote}
-I see this statement as short-sighted.  The history of computing is that the computers get smaller, and smaller.  At the same time, WSN's are getting more powerful as components from the computing world are miniaturized.  It may be true that WSN nodes, by definition, may be less powerful than desktop computers in the foreseeable future.  But It may also be true that desktop computers will become smaller and smaller until they are the size of a WSN node.
+On slide 3, the left graph, I see what is being described, but the data is so cluttered it's difficult to grasp.  Further, 2 graphs on the same page makes it difficult to understand either (though the graph on the right is much clearer, albeit pictures get small).  It would be very interesting to see a graph of the transistors in WSN's through the history of the field.  Looking at the transistors in a CPU is interesting, but it is well known that WSN's have different requirements, would be nice to see graphs of power consumption over \# of transistors, or some similar graph.  
 
-In the Sensor Network Applications section, they talk about what wireless sensor do.  I think one of the great benefits that can come out of the Sensor Network arena is complex mesh networking.  This has many applications all around us, but it isn't mentioned here, or in the paper, how advances in Sensor Networking can improve other fields.
+On slide 10, they describe using low power hardware, but requiring RAM retention.  I don't think RAM takes that much energy to keep active, but it doesn't explain why RAM retention is necessary.  From inference, I would presume because in slide 12, it says that flash memory is very power hungry, therefore going out to flash for data or program code would be expensive.
 
-One of the example applications was temp. and humidity on a large tree.  I was disappointed that they did not cover sensor network problems they had.  For example, I presume interference increased when the wind blew (moving leaves randomly).   Further, they don't talk about how the sensors communicated with the ground units?  Even though they talked about the old method, where there was a hard-wired connected base station on the ground.
+On slide 11, the left graph doesn't have units.  It's not clear what they are showing, the power of a micron troller over time?  Why is it off and on so often.  That surely can't be a good duty cycle.  The right graph is much better, with sections describing what is going on on top, with units on the left and bottom, and even a overlay comment showing the period.
 
-In the Microradios section, the authors assert:
-\begin{quote}
-Thus, WSNs process data within the network wherever possible.
-\end{quote}
-They authors never define what they mean by 'process data within the network'.  I suspect it mean that processing is done by other, possibly nearby, WSNs?  Or maybe that the WSNs will process the data on their own, then send the processed data as output.
+On slide 16, they mention 128 bytes buffers for full packet support.  I'm never thought much about packet size in a WSN, but it makes sense that it would be smaller than traditional packet sizes, 1.5kb (traditional) to 9kb (jumbo packets).   Seems like small packets, I would be interested in studies of packet overhead due to headers and routing information.  Also, it mentions on the same slide that authentication is done in hardware.  I understand encryption in hardware, but authentication usually takes complicate authorization integrated, I would be interested to see how the separated to two (should be easy, but devil is in the details).  
 
-
+I have no idea what the diagram on slide 18 is.  
 
 \end{document}
 
