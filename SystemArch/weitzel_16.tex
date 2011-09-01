@@ -18,7 +18,7 @@ A note about the structure of the paper, the figures where usually 2 pages away 
 
 A method for more efficient temperature taking would be to trigger an interrupt on a threshold temperature change, or a timeout, whichever first.  I'm sure this type of technique has been used in visual sensors, infrared or otherwise.
 
-They talk a lot about the data size is small.  But they don't say the code size is small, or mention how easy or hard it is to code in this OS.  This reminds me of ultrafast kernels written in assembly, but they where never maintainable because of complexity.  Also, they don't talk about where the code sits.  The description of the node describes the flash space as code, but an earlier paper said that the flash is very expensive to read.  So does this mean that the code is always read from the flash memory?  Where does the program information go?  Especially since given the size of the ram, it will likely be read more often than RAM.
+They talk a lot about the data size is small.  But they don't say the code size is small, or mention how easy or hard it is to code in this OS.  This reminds me of ultrafast kernels written in assembly, but they where never maintainable because of complexity.  Also, they don't talk about where the code sits.  The description of the node describes the flash space as code, but an earlier paper said that the flash is very expensive to read.  So does this mean that the code is always read from the flash memory?  Where does the program information go?  Especially since given the size of the code, and the small size of ram, the program will likely be read more often than RAM.
 
 \end{document}
 
