@@ -1,0 +1,25 @@
+\documentclass[12pt]{article}
+
+
+\begin{document}
+
+\begin{center}
+{\huge Summary: The Mote Revolution } \\
+Derek Weitzel
+\end{center}
+
+
+This presentation is describing the evolution of WSN's, and the current technology.  Reading over the slides, I couldn't help but feel that the authors where trying to sell the 'Telos Platform`.  For example, on slide 13, it feels ever much like a product slide.  It's not clear to me by the institution if these authors represent the Telos group.  Either way, this 
+
+On slide 3, the left graph, I see what is being described, but the data is so cluttered it's difficult to grasp.  Further, 2 graphs on the same page makes it difficult to understand either (though the graph on the right is much clearer, albeit pictures get small).  It would be very interesting to see a graph of the transistors in WSN's through the history of the field.  Looking at the transistors in a CPU is interesting, but it is well known that WSN's have different requirements, would be nice to see graphs of power consumption over \# of transistors, or some similar graph.  
+
+On slide 10, they describe using low power hardware, but requiring RAM retention.  I don't think RAM takes that much energy to keep active, but it doesn't explain why RAM retention is necessary.  From inference, I would presume because in slide 12, it says that flash memory is very power hungry, therefore going out to flash for data or program code would be expensive.
+
+On slide 11, the left graph doesn't have units.  It's not clear what they are showing, the power of a micron troller over time?  Why is it off and on so often.  That surely can't be a good duty cycle.  The right graph is much better, with sections describing what is going on on top, with units on the left and bottom, and even a overlay comment showing the period.
+
+On slide 16, they mention 128 bytes buffers for full packet support.  I'm never thought much about packet size in a WSN, but it makes sense that it would be smaller than traditional packet sizes, 1.5kb (traditional) to 9kb (jumbo packets).   Seems like small packets, I would be interested in studies of packet overhead due to headers and routing information.  Also, it mentions on the same slide that authentication is done in hardware.  I understand encryption in hardware, but authentication usually takes complicate authorization integrated, I would be interested to see how the separated to two (should be easy, but devil is in the details).  
+
+I have no idea what the diagram on slide 18 is.  
+
+\end{document}
+
