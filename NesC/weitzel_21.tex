@@ -4,21 +4,21 @@
 \begin{document}
 
 \begin{center}
-{\huge Summary: System Architecture Directions for Networked Sensors } \\
+{\huge Summary: The nesC Language} \\
 Derek Weitzel
 \end{center}
 
-This paper is a survey paper of the current state of nodes, and describing a new operating system, TinyOS, to run on nodes.  The paper was very informative about the TinyOS operating system.  I found the introduction sections very generic, all of the descriptions could describe any node or small computer.
+This paper is a very in-depth look at the programming language nesC.  This paper was written in 2003, which explains the extreme reliance on explaining concurrency.  
 
-Just a quick note, with the 512 bytes of ram, the entire contents of RAM can be transferred out of the radio in .2s.  A very different ratio in than in a traditional computer.
+This paper writes a lot about concurrency.  This is likely because it was written in 2003, before major investment in large scale concurrency was mainstream.  But today, concurrency is everywhere, and well understood. For example, the consumer operating systems Mac OSX and iOS, there is an framework call grand central dispatch.  It is used to provide task like concurrency very similar to the task like concurrency in the paper.  If written today, I don't believe so much of this paper would focus on concurrency.
 
-There was a long description of the lack of a buffer in the radio, even describing how the radio wasn't latched, and noise can cause issues.  But, there was no description of a buffer in the serial port.  In systems I have used, the serial port has been a fire and forget device.  But on this device, is says it's asynchronous, but not how much of a buffer there is.
+The paper claims that the TinyOS is different from other OS's in that it is driven by the environment.  I would claim that all computers are event driven.  For example, in a cluster, an event can be a user submitting a job.  A worker node will respond to the event by running the job.  In a desktop, an event can be a user interaction.  Or an event can be a network packet (same as TinyOS).  It seems odd that the authors do not see modern computing as event driven.  Even if the `tasks' in traditional OS's may be longer than those in TinyOS, they are still started by an event.
 
-A note about the structure of the paper, the figures where usually 2 pages away from the first mention.  Made me go search for the picture, flipping back and forth between the description and the picture.
+The authors noted that the target price for a mote is \$0.10 per mote.  This seems optimistic, and possibly a way in the future.  I suspect that hardware will need to change substantially in order for this price point to be achieved.  So much so, that this TinyOS will likely not be viable to run on it.
 
-A method for more efficient temperature taking would be to trigger an interrupt on a threshold temperature change, or a timeout, whichever first.  I'm sure this type of technique has been used in visual sensors, infrared or otherwise.
+The paper makes a point that there is no dynamic memory allocation in NesC, which TinyOS is written in.  If that is true, then how does the scheduler keep track of all the tasks in the run queue?  Is there a maximum limit of tasks allowed to be in the queue?  Is there clever compile time optimization?  The authors never specify.
 
-They talk a lot about the data size is small.  But they don't say the code size is small, or mention how easy or hard it is to code in this OS.  This reminds me of ultrafast kernels written in assembly, but they where never maintainable because of complexity.  Also, they don't talk about where the code sits.  The description of the node describes the flash space as code, but an earlier paper said that the flash is very expensive to read.  So does this mean that the code is always read from the flash memory?  Where does the program information go?  Especially since given the size of the code, and the small size of ram, the program will likely be read more often than RAM.
+The programming language is strikingly similar to VHDL.  Even similar names, interfaces and implementations.  It's not clear to me that the authors are correct in their statement that nesC configurations do not encapsulate the components they use.  They may not have to, but it's hard to imagine a scenario where a developer would not encapsulate a component to make it useful.  And concurrency in VHDL is extreme, across component boundaries, inside components, everywhere.
 
 \end{document}
 
