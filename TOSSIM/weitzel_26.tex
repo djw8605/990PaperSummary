@@ -1,0 +1,20 @@
+\documentclass[12pt]{article}
+
+
+\begin{document}
+
+\begin{center}
+{\huge Summary: TOSSIM: Accurate and Scalable Simulation of Entire TinyOS Applications} \\
+Derek Weitzel
+\end{center}
+
+This paper is an in-depth look at the TOSSIM TinyOS simulator.  This simulator can emulate an entire network of notes, from the application level on the node to the network communication between the nodes.  Also, the network simulation is on the bit level rather than the default TinyOS packet, AM.  
+
+I was surprised to hear that the simulator did not simulate event handler preemption.  It would seem to me that this is a major feature of TinyOS, and is the greatest (only?) example of concurrency in the TinyOS system.  They write that it wouldn't be scalable, but at the same time they say how little memory the motes take to simulate.  I would presume then to preempt a task, it would take little memory to context switch then run the event handler.  This seems like a large absence in the simulator.
+
+I liked the 'edge based radio' graph.  But, they say that only one probability is used for the edge between two nodes.  I am confused whether this is the probability that the packet is heard or is heard correctly?
+
+The authors say that simulating the radio behavior would limit the scalability of the simulator, but do not explain why.  I know higher fidelity would cause more computation time, but from the sound of the evaluations, they are able to simulate large networks with very modest hardware.  Maybe it would hurt scalability, but would it be a reasonable trade-off?
+
+\end{document}
+
