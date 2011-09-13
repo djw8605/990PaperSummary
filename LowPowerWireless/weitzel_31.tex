@@ -1,0 +1,29 @@
+\documentclass[12pt]{article}
+
+
+\begin{document}
+
+\begin{center}
+{\huge Summary: An Empirical Study of Low Power Wireless } \\
+Derek Weitzel
+\end{center}
+
+This paper describes several empirical studies of wireless networks.
+
+It appears that the wireless community has settled on 802.15.4.  I'm not entirely clear what this means, does that mean that the frequency is fixed?  Or is this the MAC layer only?  Or the bit level transmission method?  
+
+Also, the paper mentions the simple, and simple to understand methods of transfer such as OOK, ASK, FSK...  But instead the field uses much more complex OQPSK (clearly breaking the 3 letter acronym rule) and DSSS.  I would like to know the tradeoffs, certainly this caused more complexity.  Is it that hardware is able to easily support this method?  I'd imagine software could easily handle OOK.
+
+This is the first time I've seen the use of Beacon.  It makes sense though to periodically 'test the waters' and see who's around.
+
+Odd that the authors point out channel differences in packet reception rates (something most protocols don't consider), but they don't explain it until section 7.  Could have just said: The much more powerful 802.11 interferes with it different channels differently.  This is an interesting empirical find. 
+
+Very interesting:
+\begin{quote}
+The high level observation from this section is that the acknowledgement and packet reception ratios are not equal.
+\end{quote}
+Though, I read the section 3 time, and couldn't figure out how they came to this conclusion.  Talk about 3 letter acronym hell.
+
+
+\end{document}
+
