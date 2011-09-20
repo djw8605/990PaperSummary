@@ -1,0 +1,20 @@
+\documentclass[12pt]{article}
+
+
+\begin{document}
+
+\begin{center}
+{\huge Summary: Versatile Low Power Media Access for Wireless Sensor Networks } \\
+Derek Weitzel
+\end{center}
+
+This paper is a in depth look at a new wireless MAC protocol.  From reading the paper, it appears that it saves power and increases throughput by being a simpler and more adaptive version of the S-MAC protocol.  It is adaptive because it can change the size of preamble statements and other attributes of it's protocol to respond to changes in the environment.  But, this simplicity comes at a cost, it doesn't attempt to solve the issues S-MAC protocol does, such as synchronization and hidden node.
+
+There was some contradiction in the paper.  In the introduction, it said that the best protocols, and their target, is not a generic solution that is ok but not great for any application.  But in set ion 3, they say that the protocol is designed flexible to support other services and applications efficiently.
+
+I'm not quite sure what low power listening is.  Can you decrease the gain on an listening antenna.  I presume that this can cause the network to suffer since you may not be able to hear packets destined for you.  Also, it artificially lowers the range of the node, creating another case to add along to node sleeping, node on, and some where in-between (low power listening). 
+
+They assumed that the S-MAC puts the node to sleep, even though they say the implementation does not put the node to sleep.  If it doesn't, why do they assume this?  Is the implementation wrong?  Then why didn't they fix it?  If they are talking about some reference implementation in TinyOS, then it is especially troubling.   
+
+\end{document}
+
