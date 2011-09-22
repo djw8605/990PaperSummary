@@ -1,0 +1,22 @@
+\documentclass[12pt]{article}
+
+
+\begin{document}
+
+\begin{center}
+{\huge Summary: RI-MAC: A Receiver-Initiated Asynchronous Duty Cycle MAC Protocol for Dynamic Traffic Loads in Wireless Sensor Networks } \\
+Derek Weitzel
+\end{center}
+
+This paper is a summary of a new MAC protocol: RI-MAC.  It improves on X-MAC in higher throughput, packet delivery ratio, and power efficiency.  The RI-MAC is based on a receiver (or any node) periodically sending out beacon packets telling nearby nodes that it is available to receive packets.  This is very similar to modern distributed computing: No longer is the head node 'pushing' work to worker nodes, the worker nodes (receivers) are asking the head node for work.  This creates better fault tolerance and autonomy as the node can detect it's own state and environment, and decide if it should accept a task or not.
+
+Quick question: Many of the papers have been on software techniques to improve battery life.  As this is a CS course, I would expect that.  But are there as many papers about hardware being optimized for battery life?  
+
+It's not clear to me what a sender does while it's waiting for a beacon.  Will it send out it's own beacon?  Can it receive data while waiting for a beacon from another node?
+
+Is there a difference on the power draw when receiving a message vs. idle listening?
+
+The paper should have scaled Figure 14 graphs a \& b.
+
+\end{document}
+
