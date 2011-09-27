@@ -1,0 +1,22 @@
+\documentclass[12pt]{article}
+
+
+\begin{document}
+
+\begin{center}
+{\huge Summary: Routing Techniques in Wireless Sensor Networks: A survey } \\
+Derek Weitzel
+\end{center}
+
+This paper is a long survey paper regarding routing protocols used in Wireless sensor networks.  The authors sensibly divide the types routing protocols into categories.  
+
+The authors point out that: 
+\begin{quote}
+due to a relatively large number of sensor nodes, it is not possible to build a global addressing scheme for the deployment of a large number of sensor nodes as the overhead of ID maintenance is high.  Thus, traditional IP-based protocols may not be applied to WSNs.  
+\end{quote}
+As you have pointed out, the largest deployments have been in the thousands.  Which is many millions less than the IP space can handle.  With IPV6, it's billions below the limit.   Further, if you're looking for something without DHCP mechanism, look no further than MAC address schemes used in Ethernet and Wireless devices.  I believe they dismiss this well understood and widely used solution too easily.
+
+It is also worthy to note that all the protocols in the Flat Routing are query based.  Possibly this is a limitation of the routing scheme.  Or the easiest way to use a Flat Routing protocol?
+
+\end{document}
+
