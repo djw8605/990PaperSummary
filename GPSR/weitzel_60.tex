@@ -1,0 +1,26 @@
+\documentclass[12pt]{article}
+
+
+\begin{document}
+
+\begin{center}
+{\huge Summary: GPSR: Greedy Perimeter Stateless Routing for Wireless Networks } \\
+Derek Weitzel
+\end{center}
+
+This paper describes a new routing protocol, GPSR, which routes packets based on topology information.
+
+The authors say:
+\begin{quote}
+We further assume bidirectional radio reachability.
+\end{quote}
+From our other readings, this is traditionally not a good assumption.  But since the authors only simulated the network, probably didn't see any problems with this assumption.
+
+The interface queue transversal seems very intuitive and logical, though I hadn't read about it before.  It's those findings that are found intuitive after that are usually the most interesting. 
+
+Planarization of the graph seems like it may be a bad assumption.  Though true of most Wireless Sensor Networks, a specific example that they gave, rooftop network, it may not work in a large city with tall and short buildings next to each other.
+
+They compared their routing vs DSR.  DSR has long been known to be bad on the Internet, is it widely used in WSN's?
+
+\end{document}
+
