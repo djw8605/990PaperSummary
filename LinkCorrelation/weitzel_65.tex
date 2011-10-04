@@ -1,0 +1,23 @@
+\documentclass[12pt]{article}
+
+
+\begin{document}
+
+\begin{center}
+{\huge Summary: Exploring Link Correlation for Efficient Flooding in Wireless Sensor Networks } \\
+Derek Weitzel
+\end{center}
+
+This paper is a in-depth look at a new protocol for efficient flooding in wireless sensor networks.  The new protocol is called collective flooding.  In collective flooding, ACK's are largely thrown out, instead using a probabilistic approach by overhearing re-broadcasts from other nodes.
+
+I found this protocol interesting, I did have a few questions.  
+
+\begin{itemize}
+\item I have always wondered about flooding, and how it interacts with lower levels of the stack.  For example, how does flooding work with duty cycling nodes?  Does it wake everyone up in the area to broadcast?  Which in turn then they try to broadcast to all nodes, waking everyone up, again?
+
+\item I didn't see it in the article, but how is asymmetric connections handled?  If I can't hear someone else's rebroadcast, then the link will be 0\%, though it should be higher.  But do I care?  It's doing it's part, I just don't think I can talk to it.  
+
+\end{itemize}
+
+\end{document}
+
