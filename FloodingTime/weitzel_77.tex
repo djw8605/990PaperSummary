@@ -1,0 +1,28 @@
+\documentclass[12pt]{article}
+
+
+\begin{document}
+
+\begin{center}
+{\huge Summary:  The Flooding Time Synchronization Protocol} \\
+Derek Weitzel
+\end{center}
+
+This paper is an in-depth look at a new time synchronization protocol for WSNs.  Time synchronization is important for WSN's to (among other purposes) provide accurate data logging.
+
+The authors had a few assumptions that I did not agree with.  They designed their protocol to scale to several hundred nodes, though they provide no simulation of that amount.  Further, several hundred is a good goal, but other papers are aiming for much higher.
+
+The authors say:
+\begin{quote}
+The NTP has been widely deployed and proved to be effective, secure and robust in the internet. In WSN, however, non-determinism in transmission time caused by the Media Access Channel (MAC) layer of the radio stack can introduce several hundreds of milliseconds delay at each hop. Therefore, without further adaptation, NTP is suitable only for WSN applications with low precision demands.
+\end{quote}
+Though they don't explicitly say it, they do imply that the internet is deterministic.  It is known to not be deterministic.  But, it's a testament to network design that from the persecutive of users, it is deterministic.  Though it is not safe to say this.
+
+The authors say:
+\begin{quote}
+Depending on the system call overhead of the operating system and on the current processor load, the send time is nondeterministic and can be as high as hundreds of milliseconds.
+\end{quote}
+What do they mean by load?  Load on regular systems implies more than one process running at a time.  It is well known that systems do not have this issue.  What do they mean?  Tasks in queue?
+
+\end{document}
+
