@@ -1,0 +1,20 @@
+\documentclass[12pt]{article}
+
+
+\begin{document}
+
+\begin{center}
+{\huge Summary: On-Demand Time Synchronization with Predictable Accuracy } \\
+Derek Weitzel
+\end{center}
+
+This paper is an in-depth look at On-Demand time synchronization.  This paper is unusually reliant on math proofs for a WSN paper.  This unusual aspect of the paper makes it interesting (as it stands out from the crowd) but also more difficult to understand since it is so different than the typical WSN paper.
+
+I have only a few comments on the paper.
+
+In Figure 2, the top graph shows clock frequency at different voltages.  It's interesting that at different voltages, the frequency fluctuates less, and that the frequency only is erring down the frequency, rather than both above and below the frequency.  Was this shown to be consistent across several nodes?  Is this particular only to 1 node?  Also, the graph is very zoomed in, where the frequency looks like it's changing a lot, but in reality it's changing {.0015\%}.
+
+In Figure 1, the paper showed that different motes had different clock skews.  Could this data be utilized to only sync a small fraction of the nodes at a time?  You could build off of the work in this paper to do this.
+
+\end{document}
+
