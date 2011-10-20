@@ -1,0 +1,24 @@
+\documentclass[12pt]{article}
+
+
+\begin{document}
+
+\begin{center}
+{\huge Summary: The Cricket Location-Support System } \\
+Derek Weitzel
+\end{center}
+
+This paper is a description of a end-to-end system for providing location information to 3rd party applications.  The paper describes network protocols used for this system along with the base station and listener station design.  I enjoyed the `complete` system that they presented rather than the simple protocols the that other papers have presented.
+
+It is clear that this paper is dated by the reference to the new GPS systems put in rental cars.
+
+The protocol design choices are very intuitive, which usually means they are ingenious.  I especially liked the analogy of the lightening and thunder, where you can calculated the distance of the lightening strike by finding the different between the light of the strike and the thunder.  Using the same concept, they where able to calculate the distance from a beacon by calculating the difference between the RF signal (light) and the Ultrasonic pulse (sound).  This observation is quite ingenious.
+
+The randomized access protocol to the media (air) seems primitive, but since they only need to transmit 7 bytes every 250 ms in a regularly repeated (with some random change) read-only beacon, it seems like a simple and reasonable implementation.
+
+The authors point out how much power the beacon takes, and how often it needs to advertise.  They also say what type of battery the beacon operates on.  Given all this information, they could have said how long the beacon will last, but alas, they did not.
+
+After the first mention of user privacy, the implementation doesn't talk much about it again, even though it is a major design consideration.  They should have mentioned how every bit of the protocol/design effects user privacy.  Same for decentralized administration.  
+
+\end{document}
+
