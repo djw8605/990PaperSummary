@@ -4,21 +4,23 @@
 \begin{document}
 
 \begin{center}
-{\huge Summary: System Architecture Directions for Networked Sensors } \\
+{\huge Summary: Leakage-Aware Energy Synchronization for Wireless Sensor Networks } \\
 Derek Weitzel
 \end{center}
 
-This paper is a survey paper of the current state of nodes, and describing a new operating system, TinyOS, to run on nodes.  The paper was very informative about the TinyOS operating system.  I found the introduction sections very generic, all of the descriptions could describe any node or small computer.
+This paper is an in-depth look at using ultra-capacitors in wireless sensor networks.  The paper has many EE concepts in it, such as capacitor capacity (F) and capacitor leakage.
 
-Just a quick note, with the 512 bytes of ram, the entire contents of RAM can be transferred out of the radio in .2s.  A very different ratio in than in a traditional computer.
+There are many references to the Twinstar platform.  Is it a commercial platform?  Something you made?
 
-There was a long description of the lack of a buffer in the radio, even describing how the radio wasn't latched, and noise can cause issues.  But, there was no description of a buffer in the serial port.  In systems I have used, the serial port has been a fire and forget device.  But on this device, is says it's asynchronous, but not how much of a buffer there is.
+The two power supplies for the smart circuit is clever, as it draws on what other systems have used.  For example, car batteries store energy to start the engine.  Heaters always have the pilot on in order to start the rest of the furnace.
 
-A note about the structure of the paper, the figures where usually 2 pages away from the first mention.  Made me go search for the picture, flipping back and forth between the description and the picture.
+I like that the metric for the system is to tell it how long it should last, and have it calculate what it needs to do to meet this demand.  Seems like real-time scheduling.  But, like in real-time scheduling, can the system just say 'no', that it can't meet that demand?
 
-A method for more efficient temperature taking would be to trigger an interrupt on a threshold temperature change, or a timeout, whichever first.  I'm sure this type of technique has been used in visual sensors, infrared or otherwise.
+The calculations to predict lifetime are floating point calculations.  But there is no talk on what the compromise it for these calculations vs. some sort of integer calculation?  Can this be done only in integer terms?
 
-They talk a lot about the data size is small.  But they don't say the code size is small, or mention how easy or hard it is to code in this OS.  This reminds me of ultrafast kernels written in assembly, but they where never maintainable because of complexity.  Also, they don't talk about where the code sits.  The description of the node describes the flash space as code, but an earlier paper said that the flash is very expensive to read.  So does this mean that the code is always read from the flash memory?  Where does the program information go?  Especially since given the size of the code, and the small size of ram, the program will likely be read more often than RAM.
+The local energy synchronization makes it sound like the nodes will coordinate to all have the same energy levels.  But that is referred to as global energy synchronization, which I really like.  The local energy synchronization should be something like energy consumption suggestions, where the node asks the application to perform these actions to conserve energy.
+
+How do you implement an oracle system?  Especially in the real world?
 
 \end{document}
 
