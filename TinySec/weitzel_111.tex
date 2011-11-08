@@ -1,0 +1,30 @@
+\documentclass[12pt]{article}
+
+\usepackage{url}
+
+\begin{document}
+
+\begin{center}
+{\huge Summary: TinySec: A Link Layer Security Architecture for Wireless Sensor Networks } \\
+Derek Weitzel
+\end{center}
+
+This paper is an in-depth look at a link-layer security architecture for wireless sensor network.  It includes many assumptions and implementation details of the TinySec protocol.
+
+First, in the abstract, the authors say that 802.11b has built in security?  I didn't know this, since b routers give you options of WEP, WPA...
+
+The authors say that 50-80\% of wireless networks operate in the clear, surely this has changed since 2004.  
+
+The authors also say:
+\begin{quote}
+We expect that people will use Moore's law to drive down the cost of these devices and not to increase their performance capabilities.
+\end{quote}
+I think that each generation of wireless sensor is more powerful than the previous.  Maybe not growing as fast as computers, but certainly some of Moore's law is used for better performance, whether is better battery life, or faster processors, or faster radios.
+
+I find it interesting that the authors mention digging up cables and listening is unlikely.  Though true, it has been known to happen in elaborate espionage scenarios.  See \url{http://en.wikipedia.org/wiki/Operation_Ivy_Bells}.
+
+Also, the authors do not consider physical tampering (though they mention later in the paper that they are providing counter measures).  I find this odd, since the radio range is so small, if you can hear the radio, then you are probably in walking distance.
+
+
+\end{document}
+
